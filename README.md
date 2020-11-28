@@ -5,7 +5,6 @@ Compile and run a c/c++ project via cmake tool.
 ## `docker run`
 
 ```bash
-$ cd ${YOUR_PROJECT}
 $ docker run -it --name cmake-project -v /path/to/project:/code:rw -d rayyounghong/ubuntu-cmake:latest
 $ docker exec -it cmake-project /bin/bash
 ```
