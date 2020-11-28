@@ -1,13 +1,23 @@
 # Ubuntu cmake
 
-A sample yaml file:
+Compile and run a c/c++ project via cmake tool.
+
+## `docker run`
+
+```bash
+$ cd ${YOUR_PROJECT}
+$ docker run -it --name cmake-project -v /path/to/project:/code:rw -d rayyounghong/ubuntu-cmake:latest
+$ docker exec -it cmake-project /bin/bash
+```
+
+## `docker-compose`
 
 ```yml
 version: '3'
 services:
-  bash:
+  cmake-project:
     image: rayyounghong/ubuntu-cmake:latest
-    container_name: cmake-demo
+    container_name: cmake-project
     volumes:
       - .:/code
     working_dir: /code
